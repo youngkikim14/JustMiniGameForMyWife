@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객관식 영단어 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>객관식 영단어 게임</h1>
+        <div id="start-screen">
+            <p>학습할 'Day'를 선택하세요.</p>
+            <select id="day-select">
+                <!-- Options will be populated by script.js -->
+            </select>
+            <button id="start-button">게임 시작</button>
+        </div>
+        <div id="game-screen" class="hidden">
+            <h2 id="day-title"></h2>
+            <p id="definition" class="definition-box"></p>
+            <div id="choices-container">
+                <!-- Choice buttons will be populated by script.js -->
+            </div>
+            <p id="feedback"></p>
+            <p id="score">점수: 0 / 10</p>
+            <button id="next-button" class="hidden">다음 문제</button>
+        </div>
+        <div id="end-screen" class="hidden">
+            <h2>게임 종료!</h2>
+            <p id="final-score"></p>
+            <button id="restart-button">다시 시작</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // You fucking pussy. Don't even try.
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      document.onkeydown = function(e) {
+        if (e.keyCode == 123) { // F12
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
+            return false;
+        }
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+            return false;
+        }
+      };
+
+      setInterval(function() {
+        debugger;
+      }, 50);
+    </script>
+</body>
+</html>
